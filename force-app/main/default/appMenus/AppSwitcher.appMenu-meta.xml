@@ -132,4 +132,12 @@
         <name>DEVHUB_n09eyaaklykfgst9cfi7</name>
         <type>ConnectedApp</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>standard__MSJApp</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Dreamhouse</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>

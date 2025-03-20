@@ -4,6 +4,10 @@
         <label><!-- Apex Recipes --></label>
         <name>Apex_Recipes</name>
     </customApplications>
+    <customApplications>
+        <label><!-- Dreamhouse --></label>
+        <name>Dreamhouse</name>
+    </customApplications>
     <customLabels>
         <label><!-- Github username --></label>
         <name>Github_username</name>
@@ -48,6 +52,130 @@
         <label><!-- Apex Recipes --></label>
         <name>Apex_Recipes</name>
     </customTabs>
+    <customTabs>
+        <label><!-- Property Explorer --></label>
+        <name>Property_Explorer</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Property Finder --></label>
+        <name>Property_Finder</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Settings --></label>
+        <name>Settings</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>error2_text</name>
+                </fields>
+                <name>Error2</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>error3_text</name>
+                </fields>
+                <name>Error3</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>error4_text</name>
+                </fields>
+                <name>Error4</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>error5_text</name>
+                </fields>
+                <name>Error5</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>property_address</name>
+                </fields>
+                <name>address</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>error</name>
+                </fields>
+                <name>error_creating_records</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value/>
+                    </inputParameters>
+                    <name>navigate_to_record_lwc</name>
+                </fields>
+                <name>navigate_to_record_detail</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>property_broker</name>
+                </fields>
+                <fields>
+                    <name>property_description</name>
+                </fields>
+                <fields>
+                    <name>property_name</name>
+                </fields>
+                <fields>
+                    <name>property_price</name>
+                </fields>
+                <name>new_property</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>number_of_baths</name>
+                </fields>
+                <fields>
+                    <name>number_of_beds</name>
+                </fields>
+                <fields>
+                    <name>property_tags</name>
+                </fields>
+                <name>property_details</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>accept</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>multiple</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value/>
+                    </inputParameters>
+                    <name>property_picture</name>
+                </fields>
+                <name>upload_picture</name>
+            </screens>
+        </flows>
+        <fullName>Create_property</fullName>
+    </flowDefinitions>
     <flowDefinitions>
         <flows/>
         <fullName>Test</fullName>
@@ -124,6 +252,71 @@
         <promptVersions>
             <name>Apex Recipes Intro Walkthrough Step 4</name>
             <stepNumber>4</stepNumber>
+        </promptVersions>
+    </prompts>
+    <prompts>
+        <name>Property</name>
+        <promptVersions>
+            <name>Property Step 1</name>
+            <stepNumber>1</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Step 2</name>
+            <stepNumber>2</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Step 3</name>
+            <stepNumber>3</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Step 4</name>
+            <stepNumber>4</stepNumber>
+        </promptVersions>
+    </prompts>
+    <prompts>
+        <name>PropertyExplorer</name>
+        <promptVersions>
+            <name>Property Explorer Step 1</name>
+            <stepNumber>1</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 2</name>
+            <stepNumber>2</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 3</name>
+            <stepNumber>3</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 4</name>
+            <stepNumber>4</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 5</name>
+            <stepNumber>5</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 6</name>
+            <stepNumber>6</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Explorer Step 7</name>
+            <stepNumber>7</stepNumber>
+        </promptVersions>
+    </prompts>
+    <prompts>
+        <name>PropertyFinder</name>
+        <promptVersions>
+            <name>Property Finder Step 1</name>
+            <stepNumber>1</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Finder Step 2</name>
+            <stepNumber>2</stepNumber>
+        </promptVersions>
+        <promptVersions>
+            <name>Property Finder Step 3</name>
+            <stepNumber>3</stepNumber>
         </promptVersions>
     </prompts>
     <quickActions>

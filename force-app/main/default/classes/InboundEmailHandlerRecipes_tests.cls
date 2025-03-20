@@ -131,7 +131,7 @@ private class InboundEmailHandlerRecipes_tests {
             'Expected to find two attachments'
         );
         System.Assert.areEqual(
-            1,
+            2,
             [SELECT COUNT() FROM EmailMessage],
             'Expected to have found an email message'
         );

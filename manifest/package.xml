@@ -47,12 +47,16 @@
         <members>EmailManager</members>
         <members>EncryptionRecipes</members>
         <members>EncryptionRecipesTest</members>
+        <members>FileUtilities</members>
+        <members>FileUtilitiesTest</members>
         <members>FilesRecipes</members>
         <members>FilesRecipes_Tests</members>
         <members>FormattedRecipeDisplayController</members>
         <members>FormattedRecipeDisplayController_Tests</members>
         <members>FormattingRecipes</members>
         <members>FormattingRecipes_Tests</members>
+        <members>GeocodingService</members>
+        <members>GeocodingServiceTest</members>
         <members>HttpCalloutMockFactory</members>
         <members>InboundEmailHandlerRecipes</members>
         <members>InboundEmailHandlerRecipes_tests</members>
@@ -93,6 +97,7 @@
         <members>OrgShape_Tests</members>
         <members>PSGAdvancedTestingRecipes</members>
         <members>PSGTestingRecipes</members>
+        <members>PagedResult</members>
         <members>PlatformCacheBuilderRecipes</members>
         <members>PlatformCacheBuilderRecipes_Tests</members>
         <members>PlatformCacheRecipes</members>
@@ -102,6 +107,7 @@
         <members>PlatformEventRecipesTriggerHandler</members>
         <members>PlatformEventRecipesTriggerHandler_Tests</members>
         <members>PlatformEventRecipes_Tests</members>
+        <members>PropertyController</members>
         <members>QueueableChainingRecipes</members>
         <members>QueueableChainingRecipes_Tests</members>
         <members>QueueableRecipes</members>
@@ -124,6 +130,7 @@
         <members>SOSLRecipes_Tests</members>
         <members>Safely</members>
         <members>Safely_Tests</members>
+        <members>SampleDataController</members>
         <members>SampleHandler</members>
         <members>ScheduledApexDemo</members>
         <members>ScheduledApexDemo_Tests</members>
@@ -140,6 +147,8 @@
         <members>TestDouble</members>
         <members>TestFactory</members>
         <members>TestHelper</members>
+        <members>TestPropertyController</members>
+        <members>TestSampleDataController</members>
         <members>TriggerHandler</members>
         <members>TriggerHandler_Test</members>
         <name>ApexClass</name>
@@ -175,6 +184,10 @@
         <name>AssignmentRules</name>
     </types>
     <types>
+        <members>pageTemplate_2_7_3</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
         <members>Case</members>
         <members>Lead</members>
         <name>AutoResponseRules</name>
@@ -188,11 +201,23 @@
         <name>Community</name>
     </types>
     <types>
+        <members>Broker__c.Broker_Compact</members>
+        <members>Property__c.Property_Compact_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>dreamhouselogosquare</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
         <members>Salesforce</members>
+        <members>openStreetMap</members>
+        <members>s3_us_west_2_amazonaws_com</members>
         <name>CspTrustedSite</name>
     </types>
     <types>
         <members>Apex_Recipes</members>
+        <members>Dreamhouse</members>
         <members>standard__AllTabSet</members>
         <members>standard__AppLauncher</members>
         <members>standard__Approvals</members>
@@ -207,6 +232,7 @@
         <members>standard__LightningSales</members>
         <members>standard__LightningSalesConsole</members>
         <members>standard__LightningService</members>
+        <members>standard__MSJApp</members>
         <members>standard__Marketing</members>
         <members>standard__Platform</members>
         <members>standard__Sales</members>
@@ -225,6 +251,13 @@
         <members>Account.SLASerialNumber__c</members>
         <members>Account.SLA__c</members>
         <members>Account.UpsellOpportunity__c</members>
+        <members>Broker__c.Broker_Id__c</members>
+        <members>Broker__c.Email__c</members>
+        <members>Broker__c.Mobile_Phone__c</members>
+        <members>Broker__c.Phone__c</members>
+        <members>Broker__c.Picture_IMG__c</members>
+        <members>Broker__c.Picture__c</members>
+        <members>Broker__c.Title__c</members>
         <members>Bucketed_Picklist_Value__mdt.Picklist_Bucket__c</members>
         <members>Bucketed_Picklist__mdt.Field__c</members>
         <members>Bucketed_Picklist__mdt.Object__c</members>
@@ -268,6 +301,31 @@
         <members>Permission_Set_Group_Testing_Result__mdt.Permission_Set_Group__c</members>
         <members>Permission_Set_Group_Testing_Result__mdt.Test_Class_Method_Name__c</members>
         <members>Picklist_Bucket__mdt.Bucketed_Picklist__c</members>
+        <members>Property__c.Address__c</members>
+        <members>Property__c.Assessed_Value__c</members>
+        <members>Property__c.Baths__c</members>
+        <members>Property__c.Beds__c</members>
+        <members>Property__c.Broker__c</members>
+        <members>Property__c.City__c</members>
+        <members>Property__c.Date_Agreement__c</members>
+        <members>Property__c.Date_Closed__c</members>
+        <members>Property__c.Date_Contracted__c</members>
+        <members>Property__c.Date_Listed__c</members>
+        <members>Property__c.Date_Pre_Market__c</members>
+        <members>Property__c.Days_On_Market__c</members>
+        <members>Property__c.Description__c</members>
+        <members>Property__c.Location__c</members>
+        <members>Property__c.Picture_IMG__c</members>
+        <members>Property__c.Picture__c</members>
+        <members>Property__c.Price_Sold__c</members>
+        <members>Property__c.Price__c</members>
+        <members>Property__c.Record_Link__c</members>
+        <members>Property__c.State__c</members>
+        <members>Property__c.Status__c</members>
+        <members>Property__c.Tags__c</members>
+        <members>Property__c.Thumbnail_IMG__c</members>
+        <members>Property__c.Thumbnail__c</members>
+        <members>Property__c.Zip__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -317,6 +375,7 @@
         <members>BatchJob</members>
         <members>BatchJobPart</members>
         <members>BatchJobPartFailedRecord</members>
+        <members>Broker__c</members>
         <members>Bucketed_Picklist_Value__mdt</members>
         <members>Bucketed_Picklist__mdt</members>
         <members>BusinessBrand</members>
@@ -450,6 +509,7 @@
         <members>ProductConsumptionSchedule</members>
         <members>PromptAction</members>
         <members>PromptError</members>
+        <members>Property__c</members>
         <members>QuickText</members>
         <members>QuickTextUsage</members>
         <members>Recommendation</members>
@@ -474,6 +534,7 @@
         <members>Topic</members>
         <members>TopicAssignment</members>
         <members>User</members>
+        <members>UserCapabilityPreference</members>
         <members>UserExternalCredential</members>
         <members>UserLocalWebServerIdentity</members>
         <members>UserPrioritizedRecord</members>
@@ -491,6 +552,7 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>Broker__c-en_US</members>
         <members>Bucketed_Picklist_Value__mdt-en_US</members>
         <members>Bucketed_Picklist__mdt-en_US</members>
         <members>Case-en_US</members>
@@ -506,12 +568,18 @@
         <members>Metadata_Driven_Trigger__mdt-en_US</members>
         <members>Permission_Set_Group_Testing_Result__mdt-en_US</members>
         <members>Picklist_Bucket__mdt-en_US</members>
+        <members>Property__c-en_US</members>
         <members>Vehicle__c-en_US</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
         <members>Apex_Recipes</members>
+        <members>Broker__c</members>
         <members>LogEvent__c</members>
+        <members>Property_Explorer</members>
+        <members>Property_Finder</members>
+        <members>Property__c</members>
+        <members>Settings</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -570,20 +638,27 @@
     </types>
     <types>
         <members>Apex_Recipes</members>
+        <members>Broker_Record_Page</members>
         <members>DataGovernanceConsole_UtilityBar</members>
         <members>LightningSalesConsole_UtilityBar</members>
         <members>LightningSales_UtilityBar</members>
         <members>LightningService_UtilityBar</members>
+        <members>Property_Explorer</members>
+        <members>Property_Finder</members>
+        <members>Property_Record_Page</members>
         <members>SalesCloudMobile_UtilityBar</members>
+        <members>Settings</members>
         <name>FlexiPage</name>
     </types>
     <types>
+        <members>Create_property</members>
         <members>Test</members>
         <members>customer_satisfaction</members>
         <members>net_promoter_score</members>
         <name>Flow</name>
     </types>
     <types>
+        <members>Create_property</members>
         <members>Test</members>
         <members>customer_satisfaction</members>
         <members>net_promoter_score</members>
@@ -619,6 +694,7 @@
         <members>AuthorizationFormConsent-Authorization Form Consent Layout</members>
         <members>AuthorizationFormDataUse-Authorization Form Data Use Layout</members>
         <members>AuthorizationFormText-Authorization Form Text Layout</members>
+        <members>Broker__c-Broker Layout</members>
         <members>Bucketed_Picklist_Value__mdt-Bucketed Picklist Value Layout</members>
         <members>Bucketed_Picklist__mdt-Bucketed Picklist Layout</members>
         <members>BusinessBrand-Business Brand Layout</members>
@@ -701,6 +777,7 @@
         <members>ProcessException-Process Exception Layout</members>
         <members>Product2-Product Layout</members>
         <members>ProductConsumptionSchedule-Product Consumption Schedule Layout</members>
+        <members>Property__c-Property Layout</members>
         <members>QuickText-Quick Text Layout</members>
         <members>Refund-Refund Layout</members>
         <members>RefundLinePayment-Refund Line Payment Layout</members>
@@ -736,13 +813,33 @@
     <types>
         <members>apexRecipesContainer</members>
         <members>app</members>
+        <members>barcodeScanner</members>
+        <members>brokerCard</members>
+        <members>daysOnMarket</members>
         <members>errorPanel</members>
         <members>formattedDocsViewer</members>
         <members>formattedRecipeDisplay</members>
         <members>ldsUtils</members>
+        <members>listContactsFromDevice</members>
+        <members>navigateToRecord</members>
+        <members>paginator</members>
+        <members>propertyCarousel</members>
+        <members>propertyFilter</members>
+        <members>propertyListMap</members>
+        <members>propertyLocation</members>
+        <members>propertyMap</members>
+        <members>propertySummary</members>
+        <members>propertyTile</members>
+        <members>propertyTileList</members>
         <members>recipeTreeView</members>
         <members>relatedCodeTabs</members>
+        <members>sampleDataImporter</members>
         <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>FiltersChange</members>
+        <members>PropertySelected</members>
+        <name>LightningMessageChannel</name>
     </types>
     <types>
         <members>Account.AllAccounts</members>
@@ -774,6 +871,7 @@
         <members>BatchJob.All_Batch_Jobs</members>
         <members>BatchJobPart.All_Tasks</members>
         <members>BatchJobPartFailedRecord.All_Failed_Records</members>
+        <members>Broker__c.All</members>
         <members>BusinessBrand.All_BusinessBrands</members>
         <members>Campaign.AllActiveCampaigns</members>
         <members>Campaign.MyActiveCampaigns</members>
@@ -856,6 +954,7 @@
         <members>Pricebook2.All_Pricebooks</members>
         <members>Problem.AllProblemsDefault</members>
         <members>ProcessException.all_process_exceptions</members>
+        <members>Property__c.All</members>
         <members>Recommendation.All_Recommendations</members>
         <members>Refund.Refund</members>
         <members>RefundLinePayment.RefundLinePayment</members>
@@ -925,6 +1024,7 @@
         <members>Proving_With_User_Mode_Works</members>
         <members>ReadAccessToTradeStyle</members>
         <members>Read_access_to_Account_Shipping_Address</members>
+        <members>dreamhouse</members>
         <members>sfdcInternalInt__sfdc_scrt2</members>
         <name>PermissionSet</name>
     </types>
@@ -940,6 +1040,7 @@
         <members>Admin</members>
         <members>Analytics Cloud Integration User</members>
         <members>Analytics Cloud Security User</members>
+        <members>Anypoint Integration</members>
         <members>Authenticated Website</members>
         <members>B2B Reordering Portal Buyer Profile</members>
         <members>Chatter External User</members>
@@ -990,6 +1091,9 @@
     </types>
     <types>
         <members>ApexRecipesIntroWalkthrough</members>
+        <members>Property</members>
+        <members>PropertyExplorer</members>
+        <members>PropertyFinder</members>
         <name>Prompt</name>
     </types>
     <types>
@@ -1026,6 +1130,7 @@
     </types>
     <types>
         <members>ApexDevNet</members>
+        <members>nominatim_openstreetmap</members>
         <name>RemoteSiteSetting</name>
     </types>
     <types>
@@ -1224,6 +1329,7 @@
         <members>AuthorizationFormConsent</members>
         <members>AuthorizationFormDataUse</members>
         <members>BatchJob</members>
+        <members>Broker__c</members>
         <members>BusinessBrand</members>
         <members>CalendarModel</members>
         <members>CalendarView</members>
@@ -1291,6 +1397,7 @@
         <members>Product2</members>
         <members>PromptAction</members>
         <members>PromptError</members>
+        <members>Property__c</members>
         <members>QuickText</members>
         <members>QuickTextUsage</members>
         <members>RecordMergeHistory</members>
@@ -1306,6 +1413,7 @@
         <members>TodayGoal</members>
         <members>User</members>
         <members>UserAppMenuCustomization</members>
+        <members>UserCapabilityPreference</members>
         <members>UserDefinedLabel</members>
         <members>UserDefinedLabelAssignment</members>
         <members>UserEmailPreferredPerson</members>
@@ -1378,13 +1486,18 @@
         <members>helloaudio</members>
         <members>helloworld</members>
         <members>highlight</members>
+        <members>leafletjs</members>
         <members>logo</members>
         <members>markdownIt</members>
+        <members>sample_data_brokers</members>
+        <members>sample_data_contacts</members>
+        <members>sample_data_properties</members>
         <name>StaticResource</name>
     </types>
     <types>
         <members>Account</members>
         <members>Asset</members>
+        <members>Broker__c</members>
         <members>Campaign</members>
         <members>Case</members>
         <members>ChangeRequest</members>
@@ -1402,6 +1515,7 @@
         <members>Opportunity</members>
         <members>Order</members>
         <members>Problem</members>
+        <members>Property__c</members>
         <members>Solution</members>
         <members>Task</members>
         <members>Vehicle__c</members>
@@ -1427,6 +1541,11 @@
     </types>
     <types>
         <members>Apex_Recipes</members>
+        <members>Broker_Record_Page</members>
+        <members>Property_Explorer</members>
+        <members>Property_Finder</members>
+        <members>Property_Record_Page</members>
+        <members>Settings</members>
         <name>UiViewDefinition</name>
     </types>
     <types>
