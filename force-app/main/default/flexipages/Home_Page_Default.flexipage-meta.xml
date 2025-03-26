@@ -4,7 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>housingMap</componentName>
-                <identifier>c_housingMap</identifier>
+                <identifier>housingMap</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
