@@ -148,18 +148,17 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <label>Log Event</label>
+    <label>Energy Audit</label>
     <nameField>
-        <displayFormat>Log-{00000}</displayFormat>
-        <label>Log Event Name</label>
-        <type>AutoNumber</type>
+        <label>Energy Audit Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Log Events</pluralLabel>
+    <pluralLabel>Energy Audits</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
