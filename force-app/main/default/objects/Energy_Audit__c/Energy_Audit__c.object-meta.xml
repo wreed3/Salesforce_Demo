@@ -159,7 +159,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Energy Audits</pluralLabel>
-    <searchLayouts />
+    <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
