@@ -3,7 +3,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>housingMap</componentName>
+                <componentName>home:housingMap</componentName>
                 <identifier>housingMap</identifier>
             </componentInstance>
         </itemInstances>
