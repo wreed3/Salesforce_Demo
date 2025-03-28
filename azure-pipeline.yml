@@ -12,7 +12,7 @@ pr:
     - README.md
     - azure-pipelines.yml
 stages:
-- stage: salesforce Demo
+- stage: salesforceDemo
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
   jobs:
   - job: DeployDevOrg
