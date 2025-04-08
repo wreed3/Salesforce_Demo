@@ -1,36 +1,184 @@
-pr:
-  autoCancel: "true"
+# pr:
+#   autoCancel: "true"
+#   branches:
+#     include:
+#     - dev
+#     - qa
+#     - preprod
+#     - hotfix
+#     - main
+#   paths:
+#     exclude:
+#     - README.md
+#     - azure-pipelines.yml
+# stages:
+# - stage: salesforceDemo
+#   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+#   jobs:
+#   - job: DeployDevOrg
+#     steps:
+#       - task: NodeTool@0
+#         inputs:
+#           versionSpec: '14.x'
+#           checkLatest: true
+#       - bash: 
+#           npm install sfdx-cli --global
+#         displayName: Install Salesforce CLI
+#       - bash:
+#             sfdx config:set restDeploy=false --global
+#         displayName: Use SOAP API for Deployment
+#       - bash:
+#             sfdx force:auth:jwt:grant --clientid 3MVG91oqviqJKoEHB897n0v9kXKdE_1tYXPw.BN7Y7JKYPUrsJpt_IqHK4zOMX3ac_GynJK2IsOyX0L6VLdah --jwtkeyfile ./bin/server.key --username reediiiw@resourceful-bear-uxcmex.com --instanceurl https://resourceful-bear-uxcmex-dev-ed.trailblaze.lightning.force.com/
+#         displayName: Authorize Salesforce DeployDevOrg Org
+#       - bash:
+#             sfdx force:source:deploy -p force-app -w 10 -u reediiiw@resourceful-bear-uxcmex.com
+#         displayName: Deploy source code to DeployDevOrg Org
+        
+# ___________---------_______
+
+trigger:
   branches:
     include:
-    - dev
-    - qa
-    - preprod
-    - hotfix
-    - main
+      - dev
+      - qa
+      - uat
+      - preprod
+      - main
   paths:
     exclude:
     - README.md
     - azure-pipelines.yml
 stages:
-- stage: salesforceDemo
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
-  jobs:
-  - job: DeployDevOrg
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '14.x'
-          checkLatest: true
-      - bash: 
-          npm install sfdx-cli --global
-        displayName: Install Salesforce CLI
-      - bash:
-            sfdx config:set restDeploy=false --global
-        displayName: Use SOAP API for Deployment
-      - bash:
-            sfdx force:auth:jwt:grant --clientid 3MVG91oqviqJKoEHB897n0v9kXKdE_1tYXPw.BN7Y7JKYPUrsJpt_IqHK4zOMX3ac_GynJK2IsOyX0L6VLdah --jwtkeyfile ./bin/server.key --username reediiiw@resourceful-bear-uxcmex.com --instanceurl https://resourceful-bear-uxcmex-dev-ed.trailblaze.lightning.force.com/
-        displayName: Authorize Salesforce DeployDevOrg Org
-      - bash:
-            sfdx force:source:deploy -p force-app -w 10 -u reediiiw@resourceful-bear-uxcmex.com
-        displayName: Deploy source code to DeployDevOrg Org
-        
+  - stage: Build
+    displayName: 'Build Stage'
+    jobs:
+      - job: BuildJob
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Building the application..."
+              npm install
+              npm run build
+            displayName: 'Build the application'
+
+  - stage: DeployToDev
+    displayName: 'Deploy to Development'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+    jobs:
+      - deployment: DeployDev
+        environment: dev
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying to Development environment..."
+            displayName: 'Deployment to Development'
+
+  - stage: DeployToQA
+    displayName: 'Deploy to QA'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/qa'))
+    jobs:
+      - deployment: DeployQA
+        environment: qa
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying to QA environment..."
+            displayName: 'Deployment to QA'
+
+  - stage: DeployToUAT
+    displayName: 'Deploy to UAT'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/uat'))
+    jobs:
+      - deployment: DeployUAT
+        environment: uat
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying to UAT environment..."
+            displayName: 'Deployment to UAT'
+
+  - stage: DeployToPreProd
+    displayName: 'Deploy to Preproduction'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/preprod'))
+    jobs:
+      - deployment: DeployPreProd
+        environment: preprod
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying to Preproduction environment..."
+            displayName: 'Deployment to Preproduction'
+
+  - stage: DeployToProd
+    displayName: 'Deploy to Production'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - deployment: DeployProd
+        environment: production
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - script: |
+              echo "Deploying to Production environment..."
+            displayName: 'Deployment to Production'
+
+
+
+
+# --------------------------------------
+
+# trigger:
+#   branches:
+#     include:
+#       - dev
+#       - qa
+#       - preprod
+#       - main
+
+# pool:
+#   vmImage: 'ubuntu-latest'
+
+# variables:
+#   salesforceOrgDev: 'your-dev-org-credentials'   # Replace with your dev org credentials
+#   salesforceOrgQa: 'your-qa-org-credentials'     # Replace with your qa org credentials
+#   salesforceOrgPreprod: 'your-preprod-org-credentials' # Replace with your preprod org credentials
+#   salesforceOrgMain: 'your-main-org-credentials'    # Replace with your main org credentials
+
+# jobs:
+# - job: DeployToSalesforce
+#   displayName: 'Deploy to Salesforce'
+#   strategy:
+#     matrix:
+#       dev:
+#         branch: 'dev'
+#         org: $(salesforceOrgDev)
+#       qa:
+#         branch: 'qa'
+#         org: $(salesforceOrgQa)
+#       preprod:
+#         branch: 'preprod'
+#         org: $(salesforceOrgPreprod)
+#       main:
+#         branch: 'main'
+#         org: $(salesforceOrgMain)
+#   steps:
+#   - script: echo "Deploying to Salesforce Org: $(org) for branch: $(branch)"
+#     displayName: 'Print deployment details'
+
+#   - script: |
+#       echo "Authenticating to Salesforce..."
+#       # Add your Salesforce authentication script/command here
+
+#       echo "Deploying code to Salesforce..."
+#       # Add your code deployment script/command here
+#     displayName: 'Deploy to Salesforce'
+#     env:
+#       SALESFORCE_ORG: $(org)
+
+#   - script: echo "Deployment to $(branch) successful."
+#     displayName: 'Deployment Confirmation'
