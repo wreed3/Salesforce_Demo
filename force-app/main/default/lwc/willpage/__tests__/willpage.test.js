@@ -23,6 +23,6 @@ describe("c-willpage", () => {
     // Assert
     const div = element.shadowRoot.querySelector("div");
     const content = div.textContent;
-    expect(content).toBe(`Hello I am ${name}. Today is ${date}.`);
+    expect(content).toBe(`Hello I am ${name}. Today is ${date}. Minor Change.`);
   });
 });
